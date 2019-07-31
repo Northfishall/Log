@@ -7,3 +7,15 @@ sudo systemctl status mongodb
 #停止/启动/重启
 sudo systemctl stop/start/restart mongodb
 
+
+#######################
+#Windows 
+#启动服务
+mongod --dbpath D:\MongoDB\data
+
+
+
+####################################
+#
+#控制台指令
+
