@@ -12,10 +12,12 @@ sudo systemctl stop/start/restart mongodb
 #Windows 
 #启动服务
 mongod --dbpath D:\MongoDB\data
-
+#控制台
+mongo -port 27017 //如果直接输入mongo 则会自动连接本地默认端口
 
 
 ####################################
 #
 #控制台指令
-
+#collection下的所有document
+db.collectionName.find()
