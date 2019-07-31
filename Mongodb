@@ -1,0 +1,9 @@
+#Mongodb连接控制台指令
+mongo -host XXX.XX.XXX.XXX -port 27017
+
+#验证服务器状态
+sudo systemctl status mongodb
+
+#停止/启动/重启
+sudo systemctl stop/start/restart mongodb
+
