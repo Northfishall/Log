@@ -21,3 +21,19 @@ mongo -port 27017 //如果直接输入mongo 则会自动连接本地默认端口
 #控制台指令
 #collection下的所有document
 db.collectionName.find()
+#数据库状态
+db.stats()
+
+
+
+###########
+pymongo
+
+查询操作时候选择元素
+
+collection.find({},{"Name":0/1}) //条件中不能混合01除了_id以外
+
+
+query = {"属性名称" : "data"}
+
+collection.find(query,{})
