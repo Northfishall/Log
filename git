@@ -1,2 +1,5 @@
 git remote add name git@github.com:githubName/repositories.git
 
+git remote remove name
+
+
