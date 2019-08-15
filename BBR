@@ -1,0 +1,19 @@
+//删除bbr开启代码
+
+sed -i '/net\.core\.default_qdisc=fq/d' /etc/sysctl.conf
+sed -i '/net\.ipv4\.tcp_congestion_control=bbr/d' /etc/sysctl.conf
+
+//添加bbr开启代码
+
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+
+//生效命令
+
+sysctl -p
+
+//查看是否生效
+sysctl net.ipv4.tcp_congestion_control
+
+lsmod | grep bbr
+

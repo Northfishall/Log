@@ -1,0 +1,29 @@
+来自：
+https://timelate.com/archives/update-the-latest-kernel-of-ubuntu.html
+//查看系统
+uname
+
+//创建临时文件夹
+mkdir /root/kernel && cd /root/kernel
+
+//下载新版本内核 x64
+wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.19/linux-headers-4.19.0-041900_4.19.0-041900.201810221809_all.deb
+wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.19/linux-headers-4.19.0-041900-generic_4.19.0-041900.201810221809_amd64.deb
+wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.19/linux-image-unsigned-4.19.0-041900-generic_4.19.0-041900.201810221809_amd64.deb
+wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.19/linux-modules-4.19.0-041900-generic_4.19.0-041900.201810221809_amd64.deb
+
+//卸载旧版本内核 linux-image linux-headers linux-modules
+dpkg -l | grep linux-image
+dpkg -l | grep linux-headers
+dkpg -l | grep linux-modules
+
+apt-get purge Name.. -y 
+
+//更新grub系统引导
+updage-grub
+
+reboot
+
+//删除临时文件
+rm -rf /root/kernel
+
