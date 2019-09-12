@@ -1,0 +1,13 @@
+docker run -it -p 8888:8888 tensorflow/tensorflow
+
+#显示image
+docker images 
+
+#根据id删除image文件
+docker rmi ImageName
+
+#显示Container id
+docker ps -a
+
+#根据id删除实例
+docker rm id
