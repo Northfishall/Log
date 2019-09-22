@@ -1,2 +1,11 @@
-查看磁盘空间
+查磁盘空间
 df -hl
+
+修改ssh配置
+服务端
+/etc/ssh/sshd_config
+客户端
+/etc/ssh/ssh_config
+
+查看绝对路径
+pwd

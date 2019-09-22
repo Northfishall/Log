@@ -1,4 +1,4 @@
-docker run -it -p 8888:8888 tensorflow/tensorflow
+docker run -it -p 8888:8888 tensorflow/tensorflow:latest-py3
 
 #显示image
 docker images 
@@ -11,3 +11,12 @@ docker ps -a
 
 #根据id删除实例
 docker rm id
+
+#容器内运行主机上开发的Tensorflow程序 
+docker run -it --rm $PWD:/tmp -w /tmp tensorflow/tensorflow python ./script.py
+-v 本地目录:容器内目录 容器目录不可为相对路径
+
+
+#下载tensorflow image
+docker pull tensorflow/tensorflow:latest-py3
+

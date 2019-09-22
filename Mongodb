@@ -1,11 +1,14 @@
+##########################33
+#ubuntu 
+
 #Mongodb连接控制台指令
 mongo -host XXX.XX.XXX.XXX -port 27017
 
 #验证服务器状态
 sudo systemctl status mongodb
 
-#停止/启动/重启
-sudo systemctl stop/start/restart mongodb
+#查看状态/停止/启动/重启
+sudo systemctl status/stop/start/restart mongodb
 
 
 #######################
@@ -37,3 +40,9 @@ collection.find({},{"Name":0/1}) //条件中不能混合01除了_id以外
 query = {"属性名称" : "data"}
 
 collection.find(query,{})
+##################################33
+#导出表
+mongoexport -h IP -d dbName -c CollectionName -o SavePath
+
+#导入表
+mongoimport -h IP -d dbName -c CollectionName --upsert Path/name.dat
